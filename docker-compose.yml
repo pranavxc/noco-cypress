@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  xc-mysql-sakila-db:
+     network_mode: host
+     image: mysql:8.0
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password
+     volumes:
+       - ./packages/nocodb/tests/mysql-sakila-db:/docker-entrypoint-initdb.d
+  xc-cypress-nocodb:
+    network_mode: host
+    image: nocodb/nocodb:latest
+    ports:
+      - "8080:8080"
+
