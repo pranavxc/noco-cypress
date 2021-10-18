@@ -12,6 +12,5 @@ services:
   xc-cypress-nocodb:
     network_mode: host
     image: nocodb/nocodb:latest
-    ports:
-      - "8080:8080"
+
 
