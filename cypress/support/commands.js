@@ -28,7 +28,7 @@ require('@4tw/cypress-drag-drop')
 
 // for waiting until page load
 Cypress.Commands.add('waitForSpinners', () => {
-  cy.visit('http://localhost:3000', {
+  cy.visit('/dashboard', {
     retryOnNetworkFailure: true,
     timeout: 1200000,
     headers: {
