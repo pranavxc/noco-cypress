@@ -4,9 +4,7 @@
 name: "CI/CD"
 on:
   push:
-    branches: [ main, cypress ]
-  pull_request:
-    branches: [ main ]
+    branches: [ cypress ]
 
 jobs:
   cypress-run:

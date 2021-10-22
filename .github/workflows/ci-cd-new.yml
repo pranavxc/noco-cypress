@@ -1,0 +1,61 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: "CI/CD new"
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test1:
+    runs-on: ubuntu-20.04
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Cypress run
+       uses: cypress-io/github-action@v2
+       with:
+          start: docker-compose up -d
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 900
+          with:
+            spec: cypress/test/masterSuite.js
+  test2:
+    runs-on: ubuntu-20.04
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Cypress run
+       uses: cypress-io/github-action@v2
+       with:
+          start: docker-compose up -d
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 900
+          with:
+            spec: cypress/test/a.js
+  test3:
+    runs-on: ubuntu-20.04
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Cypress run
+       uses: cypress-io/github-action@v2
+       with:
+          start: docker-compose up -d
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 900
+          with:
+            spec: cypress/test/b.js
+  test4:
+    runs-on: ubuntu-20.04
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Cypress run
+       uses: cypress-io/github-action@v2
+       with:
+          start: docker-compose up -d
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 900
+          with:
+            spec: cypress/test/d.js
