@@ -1,8 +1,11 @@
 {
   "projectId": "z77z4w",
-  "baseUrl": "http://localhost:8080/dashboard/",
+  "baseUrl": "http://localhost:8080/",
   "testFiles": [
-      "test/masterSuite.js"     
+    "test/masterSuite.js" ,
+    "test/a.js" ,
+    "test/b.js" ,
+    "test/d.js"
   ],
   "defaultCommandTimeout": 13000,
   "pageLoadTimeout": 600000,
