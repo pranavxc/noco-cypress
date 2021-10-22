@@ -18,7 +18,7 @@ jobs:
           start: docker-compose up -d
           wait-on: 'http://localhost:8080'
           wait-on-timeout: 900
-          spec: cypress/test/masterSuite.js
+          spec: cypress/integration/test/masterSuite.js
 
   test2:
     runs-on: ubuntu-20.04
@@ -31,7 +31,7 @@ jobs:
           start: docker-compose up -d
           wait-on: 'http://localhost:8080'
           wait-on-timeout: 900
-          spec: cypress/test/a.js
+          spec: cypress/integration/test/a.js
 
   test3:
     runs-on: ubuntu-20.04
@@ -44,7 +44,7 @@ jobs:
           start: docker-compose up -d
           wait-on: 'http://localhost:8080'
           wait-on-timeout: 900
-          spec: cypress/test/b.js
+          spec: cypress/integration/test/b.js
   test4:
     runs-on: ubuntu-20.04
     steps:
@@ -56,4 +56,4 @@ jobs:
           start: docker-compose up -d
           wait-on: 'http://localhost:8080'
           wait-on-timeout: 900
-          spec: cypress/test/d.js
+          spec: cypress/integration/test/d.js
