@@ -7,6 +7,19 @@ on:
     branches: [ main ]
 
 jobs:
+  testNew:
+    runs-on: ubuntu-20.04
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Cypress run
+       uses: cypress-io/github-action@v2
+       with:
+          start: docker-compose up -d
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 900
+          command: npm run cy:parallel
+
   test1:
     runs-on: ubuntu-20.04
     steps:
