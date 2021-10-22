@@ -1,10 +1,10 @@
 {
   "suites": 1,
   "tests": 2,
-  "passes": 0,
+  "passes": 1,
   "pending": 0,
-  "failures": 2,
-  "start": "2021-10-22T06:10:28.117Z",
-  "duration": 39996,
+  "failures": 1,
+  "start": "2021-10-22T06:12:52.100Z",
+  "duration": 59309,
   "file": "cypress/integration/test/b.js"
 }
