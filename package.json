@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run",
-    "cy:parallel": "cypress-parallel -s cy:run -t 4 -d /home/pranav/Desktop/noco-cypress/cypress/integration/test"
+    "cy:parallel": "cypress-parallel -s cy:run -t 4 -d cypress/integration/test"
   },
   "keywords": [],
   "author": "",
